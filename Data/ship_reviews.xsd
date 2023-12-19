@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.algonquincollege.com/cst8259/labs" xmlns:alg="https://www.algonquincollege.com/cst8259/labs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ships">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="ship">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" />
+							<xs:element name="imo" type="xs:unsignedInt" />
+							<xs:element name="type" type="alg:ShipType" />
+							<xs:element name="flag" type="xs:string" />
+							<xs:element name="gross_ton" type="xs:unsignedInt" />
+							<xs:element name="dwt" type="xs:unsignedInt" />
+							<xs:element name="length" type="xs:unsignedShort" />
+							<xs:element name="beam" type="xs:unsignedByte" />
+							<xs:element name="draught" type="xs:decimal" />
+							<xs:element name="photo" type="xs:string" />
+							<xs:element name="build_year" type="xs:unsignedShort" />
+							<xs:element name="owner" type="xs:string" />
+							<xs:element name="manager" type="xs:string" />
+							<xs:element name="location">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="longitude" type="xs:decimal" />
+										<xs:element name="latitude" type="xs:decimal" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="destination" type="xs:string" />
+							<xs:element name="last_port" type="xs:string" />
+							<xs:element name="ETA" type="xs:string" />
+							<xs:element name="ship_evaluation">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="vessel_quality" type="alg:RangeType" />
+										<xs:element name="crew_performance" type="alg:RangeType" />
+										<xs:element name="crew_attitude" type="alg:RangeType" />
+										<xs:element name="fuel_efficiency" type="alg:RangeType" />
+										<xs:element name="safety_score_by_third_party" type="alg:RangeType" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="last_update" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="ShipType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Container"/>
+			<!--Container-->
+			<xs:enumeration value="Bulker"/>
+			<!--Bulker-->
+			<xs:enumeration value="Tanker"/>
+			<!--Tanker-->
+			<xs:enumeration value="LNG Tanker"/>
+			<!--LNG-->
+			<xs:enumeration value="PCC"/>
+			<!--PCC-->
+			<xs:enumeration value="General Cargo"/>
+			<!--General Cargo-->
+			
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="RangeType">
+		<xs:simpleContent>
+			<xs:extension base="xs:unsignedByte">
+				<xs:attribute name="min" type="xs:unsignedByte" use="required" />
+				<xs:attribute name="max" type="xs:unsignedByte" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

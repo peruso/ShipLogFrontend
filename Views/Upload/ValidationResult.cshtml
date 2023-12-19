@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Ship_Review.Models.XmlValidationError>
+@{
+    ViewData["Title"] = "ValidationResult";
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+
+<h1>ValidationResult</h1>
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success">
+        @successMessage
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        The following errors were found when validating @ViewData["XmlFileName"] against @ViewData["SchemaFileName"]:
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Element)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ErrorType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Line)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Column)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                if (item != null)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Element)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ErrorType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Line)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Column)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Message)
+                        </td>
+
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}

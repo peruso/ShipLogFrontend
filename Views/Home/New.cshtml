@@ -1,0 +1,225 @@
+﻿@model ShipInfoAndEvaluation
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<h2>Register a New Ship</h2>
+<hr />
+<form asp-action="New">
+    <div class="row">
+        <div class="col-md-8">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Name
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            IMO
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Imo" class="form-control" />
+            <span asp-validation-for="Imo" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Type
+        </div>
+        <div class="col-md-4">
+            <select asp-for="Type" class="form-control">
+                <option value="Container">Container</option>
+                <option value="Tanker">Tanker</option>
+                <option value="LNG Tanker">LNG Tanker</option>
+                <option value="Bulker">Bulker</option>
+                <option value="General Cargo">General Cargo</option>
+                <option value="PCC">PCC</option>
+            </select>
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- 他のフォームグループも同様に mb-3 クラスを追加 -->
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Flag
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Flag" class="form-control" />
+            <span asp-validation-for="Flag" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Gross Ton
+        </div>
+        <div class="col-md-4">
+            <input asp-for="GrossTon" class="form-control" />
+            <span asp-validation-for="GrossTon" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            DWT
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Dwt" class="form-control" />
+            <span asp-validation-for="Dwt" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Length
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Length" class="form-control" />
+            <span asp-validation-for="Length" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Beam
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Beam" class="form-control" />
+            <span asp-validation-for="Beam" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Draught
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Draught" class="form-control" />
+            <span asp-validation-for="Draught" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Photo
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Photo" class="form-control" />
+            <span asp-validation-for="Photo" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Build Year
+        </div>
+        <div class="col-md-4">
+            <input asp-for="BuildYear" class="form-control" />
+            <span asp-validation-for="BuildYear" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Owner
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Owner" class="form-control" />
+            <span asp-validation-for="Owner" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Manager
+        </div>
+        <div class="col-md-4">
+            <input asp-for="Manager" class="form-control" />
+            <span asp-validation-for="Manager" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Vessel Quality Value
+        </div>
+        <div class="col-md-4">
+            <select asp-for="VesselQualityValue" class="form-control">
+                @for (int i = 0; i <= 5; i++)
+                {
+                    <option value="@i">@i</option>
+                }
+            </select>
+            <span asp-validation-for="VesselQualityValue" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Crew Performance Value
+        </div>
+        <div class="col-md-4">
+            <select asp-for="CrewPerformanceValue" class="form-control">
+                @for (int i = 0; i <= 5; i++)
+                {
+                    <option value="@i">@i</option>
+                }
+            </select>
+            <span asp-validation-for="CrewPerformanceValue" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Crew Attitude Value
+        </div>
+        <div class="col-md-4">
+            <select asp-for="CrewAttitudeValue" class="form-control">
+                @for (int i = 0; i <= 5; i++)
+                {
+                    <option value="@i">@i</option>
+                }
+            </select>
+            <span asp-validation-for="CrewAttitudeValue" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Fuel Efficiency Value
+        </div>
+        <div class="col-md-4">
+            <select asp-for="FuelEfficiencyValue" class="form-control">
+                @for (int i = 0; i <= 5; i++)
+                {
+                    <option value="@i">@i</option>
+                }
+            </select>
+            <span asp-validation-for="FuelEfficiencyValue" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            Safety Score Value
+        </div>
+        <div class="col-md-4">
+            <select asp-for="SafetyScoreValue" class="form-control">
+                @for (int i = 0; i <= 5; i++)
+                {
+                    <option value="@i">@i</option>
+                }
+            </select>
+            <span asp-validation-for="SafetyScoreValue" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row form-group mb-3">
+        <div class="col-md-2">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

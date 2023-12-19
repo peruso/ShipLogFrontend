@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ship_Review.props" />
+</Project>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ships xmlns ="https://www.algonquincollege.com/cst8259/labs"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		     xsi:schemaLocation="https://www.algonquincollege.com/cst8259/labs ship_reviews.xsd">
+   <ship>
+    <name>TAKASAKI</name>
+    <imo>9320831</imo>
+    <type>Tanker</type>
+    <flag>Liberia</flag>
+    <gross_ton>159938</gross_ton>
+    <dwt>300390</dwt>
+    <length>333</length>
+    <beam>60</beam>
+    <draught>20.5</draught>
+    <photo>https://www.aukevisser.nl/supertankers/VLCC-T/2431203c0.jpg</photo>
+    <build_year>2005</build_year>
+    <owner>Sake Enterprises Ltd - Athens, Greece</owner>
+    <manager>Dynacom Tankers Management Ltd - Athens, Greece</manager>
+    <location>
+        <longitude>139.74448</longitude>
+        <latitude>34.36638</latitude>
+    </location>    
+    <destination>JPHKD</destination>
+    <last_port>JPSAK</last_port>
+    <ETA>2023-12-06 09:00</ETA>
+    <ship_evaluation>
+     <vessel_quality min="0" max="5">4</vessel_quality>
+     <crew_performance min="0" max="5">4</crew_performance>
+     <crew_attitude min="0" max="5">3</crew_attitude>
+     <fuel_efficiency min="0" max="5">4</fuel_efficiency>
+     <safety_score_by_third_party min="0" max="5">5</safety_score_by_third_party>
+    </ship_evaluation>
+    <last_update>2023-12-04 00:20</last_update>
+  </ship>
+  <ship>
+    <name>AL JASRA</name>
+    <imo>9132791</imo>
+    <type>LNG Tanker</type>
+    <flag>Marshall Islands</flag>
+    <gross_ton>111168</gross_ton>
+    <dwt>72218</dwt>
+    <length>298</length>
+    <beam>46</beam>
+    <draught>9.2</draught>
+    <photo>https://www.aukevisser.nl/supertankers/gas-1/260784f50.jpg</photo>
+    <build_year>2000</build_year>
+    <owner>Nyk Lng Shipmanagement - Tokyo, Japan</owner>
+    <manager>Nyk Lng Shipmanagement - Tokyo, Japan</manager>
+    <location>
+        <longitude>119.50304</longitude>
+        <latitude>22.39464</latitude>
+    </location>   
+    <destination>JPANE</destination>
+    <last_port>SGSIN</last_port>
+    <ETA>2023-12-25 13:00</ETA>
+    <ship_evaluation>
+        <vessel_quality min="0" max="5">5</vessel_quality>
+        <crew_performance min="0" max="5">4</crew_performance>
+        <crew_attitude min="0" max="5">4</crew_attitude>
+        <fuel_efficiency min="0" max="5">3</fuel_efficiency>
+        <safety_score_by_third_party min="0" max="5">4</safety_score_by_third_party>
+    </ship_evaluation>
+    <last_update>2023-12-04 00:10</last_update>
+  </ship>
+	<ship>
+		<name>NYK ORP</name>
+		<imo>9313008</imo>
+		<type>Container</type>
+		<flag>Singapore</flag>
+		<gross_ton>99543</gross_ton>
+		<dwt>104525</dwt>
+		<length>336</length>
+		<beam>46</beam>
+		<draught>13.2</draught>
+		<photo>https://static.vesselfinder.net/ship-photo/9313008-563061300-b8536ca200e59fa103c1e2ac919cd540/1?v1</photo>
+		<build_year>2008</build_year>
+		<owner>NYK Shipmanagement - Singapore</owner>
+		<manager>NYK Shipmanagement - Singapore</manager>
+		<location>
+			<longitude>122.74448</longitude>
+			<latitude>15.36638</latitude>
+		</location>
+		<destination>JPUKB</destination>
+		<last_port>JPTYO</last_port>
+		<ETA>2023-12-06 09:00</ETA>
+		<ship_evaluation>
+			<vessel_quality min="0" max="5">4</vessel_quality>
+			<crew_performance min="0" max="5">5</crew_performance>
+			<crew_attitude min="0" max="5">5</crew_attitude>
+			<fuel_efficiency min="0" max="5">4</fuel_efficiency>
+			<safety_score_by_third_party min="0" max="5">5</safety_score_by_third_party>
+		</ship_evaluation>
+		<last_update>2023-12-08 00:20</last_update>
+	</ship>
+	<ship>
+		<name>Battle ship</name>
+		<imo>9313005</imo>
+		<type>Container</type>
+		<flag>Singapore</flag>
+		<gross_ton>99543</gross_ton>
+		<dwt>104525</dwt>
+		<length>336</length>
+		<beam>46</beam>
+		<draught>13.2</draught>
+		<photo>https://static.vesselfinder.net/ship-photo/9313008-563061300-b8536ca200e59fa103c1e2ac919cd540/1?v1</photo>
+		<build_year>2008</build_year>
+		<owner>NYK Shipmanagement - Singapore</owner>
+		<manager>NYK Shipmanagement - Singapore</manager>
+		<location>
+			<longitude>122.74448</longitude>
+			<latitude>15.36638</latitude>
+		</location>
+		<destination>JPUKB</destination>
+		<last_port>JPTYO</last_port>
+		<ETA>2023-12-06 09:00</ETA>
+		<ship_evaluation>
+			<vessel_quality min="0" max="5">4</vessel_quality>
+			<crew_performance min="0" max="5">5</crew_performance>
+			<crew_attitude min="0" max="5">5</crew_attitude>
+			<fuel_efficiency min="0" max="5">4</fuel_efficiency>
+			<safety_score_by_third_party min="0" max="5">5</safety_score_by_third_party>
+		</ship_evaluation>
+		<last_update>2023-12-08 00:20</last_update>
+	</ship>
+</ships>
